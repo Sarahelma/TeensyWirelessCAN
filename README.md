@@ -5,11 +5,13 @@ switches and LED for IO purposes. The program uses extended CAN IDs and filters 
 these can be changed in RFplusCANext1. 
 
 ## Files
-1. Rx_Combo - uploaded to the reciever and used for range testing
-2. Tx_Combo - uploaded to the transmitter and used for range testing
-3. RFplusCANExt1 - uploaded to the transmitter, filters for DTI extented CAN ID on CAN2 and transmits wirelessly
-4. trace_data.h - sample data based off motor testing, uncomment section on RFplusCANExt1 to transmit over CAN1
-5. RFplusCANExt2 - uploaded to the reciever, listens for nRF24 messages and prints to serial
+1. [Rx_Combo](https://github.com/Sarahelma/TeensyWirelessCAN/blob/main/RX_combo.ino) - uploaded to the receiver and used for range testing
+2. [Tx_Combo](https://github.com/Sarahelma/TeensyWirelessCAN/blob/main/TX_combo.ino) - uploaded to the transmitter and used for range testing
+3. [RFplusCANExt1](https://github.com/Sarahelma/TeensyWirelessCAN/blob/main/RFplusCANExt1.ino) - uploaded to the transmitter, filters for DTI extended CAN ID on CAN2 and transmits wirelessly
+4. [trace_data.h](https://github.com/Sarahelma/TeensyWirelessCAN/blob/main/trace_data.h) - sample data based off motor testing, uncomment section on RFplusCANExt1 to transmit over CAN1
+5. [RFplusCANExt2](https://github.com/Sarahelma/TeensyWirelessCAN/blob/main/RFplusCAN2Ext.ino) - uploaded to the receiver, listens for nRF24 messages and prints to serial
+6. [AnalogRfPlusCAN](https://github.com/Sarahelma/TeensyWirelessCAN/blob/main/AnalogRfPlusCAN.ino) - same as 3 but reads an analog signal from a potentiometer, encodes it as ERPM
+
 
 ## Range testing
 This was done to range test NRF24l01P modules and does not rely on CAN communication. For range testing upload Rx_Combo and Tx_Combo to respective teensys. Digital switches on pins 16 and 17 are used to set data rate for tests
